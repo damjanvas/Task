@@ -1,0 +1,12 @@
+<div class="card card-w-title">
+    <p-toolbar>
+      <div class="ui-toolbar-group-left">
+        <button pButton type="button" label="Main" routerLink="/main" class="buttonpos"></button>
+        <button pButton type="button" label="News" routerLink="/news" class="buttonpos"></button>
+        <button pButton type="button" label="Profile" routerLink="/profile" class="buttonpos"></button>
+      </div>
+      <div class="ui-toolbar-group-right">
+        <button *ngIf="loggedIn()" pButton type="button" label="Logout" (click)="logout()"></button>
+      </div>
+    </p-toolbar>
+  </div>

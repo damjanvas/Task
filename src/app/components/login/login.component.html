@@ -1,0 +1,38 @@
+<div class="ui-g-4"></div>
+<div *ngIf="entityForm" class="ui-g-4 ui-md-4 ui-sm-12 pos">
+  <p-fieldset legend="Login" [formGroup]="entityForm">
+    <div class="ui-g">
+      <div class="ui-g-12">
+
+        <div class="ui-g-12 firstGroup">
+          <div class="ui-grid-12">
+            <label>Username</label>
+          </div>
+          <div class="ui-grid-12">
+            <input type="text" pInputText class="input" formControlName="username">
+          </div>
+        </div>
+
+        <div class="ui-g-12 secondGroup">
+          <div class="ui-grid-12">
+            <label>Password</label>
+          </div>
+          <div class="ui-grid-12">
+            <input type="text" pInputText class="input" formControlName="password">
+          </div>
+        </div>
+
+        <div class="ui-g-4 ui-g-offset-8 buttondiv">
+          <button pButton type="button" label="Login" class="loginbutton" (click)="login()"></button>
+        </div>
+
+        <div *ngIf="showError">
+          <p style="color: red">Username or password is incorrect!
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </p-fieldset>
+</div>
+<div class="ui-g-4"></div>
